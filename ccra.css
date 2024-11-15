@@ -1,0 +1,67 @@
+/* Encapsular los estilos de inicio de sesión dentro de clases específicas */
+.login-container-futbol {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    text-align: center;
+    color: white;
+}
+
+.login-container-futbol h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #28a745; /* Color verde fútbol */
+    font-family: 'Arial Black', sans-serif;
+}
+
+.login-container-futbol h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.input-group-futbol {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group-futbol label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.input-group-futbol input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container-futbol button {
+    width: 80%; /* Reducir el ancho del botón */
+    padding: 8px; /* Reducir el padding para hacerlo más pequeño */
+    background-color: #28a745; /* Verde futbolístico */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Borde redondeado más notable */
+    cursor: pointer;
+    font-size: 14px; /* Fuente más pequeña */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+    margin-top: 10px; /* Añadir un pequeño margen superior */
+}
+
+.login-container-futbol button:hover {
+    background-color: #218838; /* Efecto hover */
+}
+
+.error-futbol {
+    color: red;
+    font-size: 12px;
+    display: none;
+}

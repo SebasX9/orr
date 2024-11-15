@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Club de Fútbol</title>
+    <link rel="stylesheet" href="ccra.css">
+</head>
+<body>
+    <div class="login-container-futbol">
+        <h1>Club de Fútbol</h1>
+        <h2>Inicio de Sesión</h2>
+        <form id="loginFormFutbol" onsubmit="return validarFormularioFutbol()">
+            <div class="input-group-futbol">
+                <label for="usernameFutbol">Usuario:</label>
+                <input type="text" id="usernameFutbol" name="username" placeholder="Ingresa tu usuario">
+                <small id="usernameErrorFutbol" class="error-futbol"></small>
+            </div>
+            <div class="input-group-futbol">
+                <label for="passwordFutbol">Contraseña:</label>
+                <input type="password" id="passwordFutbol" name="password" placeholder="Ingresa tu contraseña">
+                <small id="passwordErrorFutbol" class="error-futbol"></small>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    function validarFormularioFutbol() {
+    let username = document.getElementById("usernameFutbol").value;
+    let password = document.getElementById("passwordFutbol").value;
+    let valid = true;
+
+    // Validación de campo de usuario
+    if (username === "") {
+        mostrarErrorFutbol("usernameErrorFutbol", "El usuario es obligatorio.");
+        valid = false;
+    } else {
+        ocultarErrorFutbol("usernameErrorFutbol");
+    }
+
+    // Validación de campo de contraseña
+    if (password === "") {
+        mostrarErrorFutbol("passwordErrorFutbol", "La contraseña es obligatoria.");
+        valid = false;
+    } else {
+        ocultarErrorFutbol("passwordErrorFutbol");
+    }
+
+    return valid;
+}
+
+function mostrarErrorFutbol(id, mensaje) {
+    let errorElement = document.getElementById(id);
+    errorElement.innerText = mensaje;
+    errorElement.style.display = "block";
+}
+
+function ocultarErrorFutbol(id) {
+    let errorElement = document.getElementById(id);
+    errorElement.style.display = "none";
+}
+
+</script>
